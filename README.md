@@ -12,8 +12,8 @@ _Documentation by Romi Julianto_
 node src/index.js
 ```
 
-### Run Request in PostMan
-<a href=/><img src= width=400>
+### Swagger Docuemntation Screenshoot
+<a href=/><img src=https://github.com/romijulianto/express-sequelize-swagger-api/blob/main/documentation/images/swagger-documentation.jpg width=400>
 </a>
 
 ### Referensi
