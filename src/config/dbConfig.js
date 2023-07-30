@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize("railway", "root", "BucmDQmkgfVTpsfZ01L2", {
-  host: process.env.DATABASE_HOST,
-  port: process.env.DATABASE_PORT,
+  host: "containers-us-west-162.railway.app",
+  port: 6308,
   dialect: "mysql",
 });
 
