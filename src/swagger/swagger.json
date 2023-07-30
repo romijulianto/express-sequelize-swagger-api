@@ -11,7 +11,7 @@
             "description": "Local development server (HTTP)"
         },
         {
-            "url": "https://media-backend.up.railway.app",
+            "url": "https://express-sequelize.up.railway.app",
             "description": "Production server (HTTPS)"
         }
     ],

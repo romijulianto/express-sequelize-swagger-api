@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use((req, res, next) => {
-  const baseUrl = "https://media-backend.up.railway.app";
+  const baseUrl = "https://express-sequelize.up.railway.app";
   res.redirect(`${baseUrl}/api/docs`);
 });
 
