@@ -6,11 +6,7 @@ const swaggerDocument = require("../src/swagger/swagger.json");
 const app = express();
 
 app.use(express.json());
-
-app.use((req, res, next) => {
-  const baseUrl = "https://express-sequelize.up.railway.app";
-  res.redirect(`${baseUrl}/api/docs`);
-});
+require("dotenv").config();
 
 // add route for swagger document API
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
