@@ -1,15 +1,10 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize(
-  "project_express-sequelize-swagger-api",
-  "root",
-  "root",
-  {
-    host: "127.0.0.1",
-    port: 8889,
-    dialect: "mysql",
-  }
-);
+const sequelize = new Sequelize("railway", "root", "BucmDQmkgfVTpsfZ01L2", {
+  host: process.env.DATABASE_HOST,
+  port: process.env.DATABASE_PORT,
+  dialect: "mysql",
+});
 
 sequelize
     .sync({ force: false })
