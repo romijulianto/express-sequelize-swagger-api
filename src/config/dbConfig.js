@@ -1,13 +1,13 @@
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(
-  process.env.DATABASE_NAME,
-  process.env.DATABASE_USER,
-  `${process.env.DATABASE_PASSWORD}`,
+  "railway",
+  "root",
+  "gA1e-eGfBcHfFEd113DGaEACce61-a5D",
   {
-    host: process.env.DATABASE_HOST,
-    port: process.env.DATABASE_PORT,
-    dialect: "postgres",
+    host: "monorail.proxy.rlwy.net",
+    port: 45908,
+    dialect: "mysql",
   }
 );
 
