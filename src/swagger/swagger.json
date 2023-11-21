@@ -16,7 +16,7 @@
     }
   ],
   "paths": {
-    "/users": {
+    "/express-user/users": {
       "get": {
         "summary": "Get all users",
         "responses": {
@@ -61,7 +61,7 @@
         }
       }
     },
-    "/users/{id}": {
+    "/express-user/users/{id}": {
       "get": {
         "summary": "Get user by ID",
         "parameters": [
