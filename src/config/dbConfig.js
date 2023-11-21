@@ -1,18 +1,23 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("railway", "root", "BucmDQmkgfVTpsfZ01L2", {
-  host: "containers-us-west-162.railway.app",
-  port: 6308,
-  dialect: "mysql",
-});
+const sequelize = new Sequelize(
+  process.env.DATABASE_NAME,
+  process.env.DATABASE_USER,
+  process.env.DATABASE_PASSWORD,
+  {
+    host: process.env.DATABASE_HOST,
+    port: process.env.DATABASE_PORT,
+    dialect: "postgres",
+  }
+);
 
 sequelize
-    .sync({ force: false })
-    .then(() => {
-        console.log("Database synchronized");
-    })
-    .catch((error) => {
-        console.error("Failed to synchronize database:", error);
-    });
+  .sync({ force: false })
+  .then(() => {
+    console.log("Database synchronized");
+  })
+  .catch((error) => {
+    console.error("Failed to synchronize database:", error);
+  });
 
 module.exports = sequelize;

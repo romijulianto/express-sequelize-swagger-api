@@ -9,11 +9,10 @@ app.use(express.json());
 require("dotenv").config();
 
 // add route for swagger document API
-app.use("express/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.use("express/users", userRoutes);
+app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use("/users", userRoutes);
 
 const PORT = process.env.PORT;
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on port ${PORT}.`);
 });
-
